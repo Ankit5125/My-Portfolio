@@ -1,6 +1,8 @@
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:mouse_follower/mouse_follower.dart';
-import 'package:portfolio/Paths/Home.dart';
+import 'package:portfolio/screens/Home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,14 +15,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'PortFolio',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromRGBO(239, 235, 229, 1),
           primary: const Color.fromARGB(255, 0, 0, 0),
         ),
+        fontFamily: "AlanSans",
         primaryColor: Colors.black,
       ),
+
       home: MouseFollower(
         mouseStylesStack: [
           MouseStyle(
